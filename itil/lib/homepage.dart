@@ -1,19 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/cupertino.dart';
 
-import '../drawer.dart';
+import 'drawer.dart';
 
-class Page2 extends StatelessWidget {
-  const Page2({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key, required this.title});
 
+  final String title;
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  var search = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'saw',
+          widget.title,
           style: TextStyle(
             fontSize: 30.0,
           ),
@@ -48,7 +53,9 @@ class Page2 extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: TextField(
-                onChanged: (value) {},
+                onChanged: (value) {
+                  search = value;
+                },
                 decoration: InputDecoration(
                   suffixIcon: IconButton(
                       color: Colors.black,
