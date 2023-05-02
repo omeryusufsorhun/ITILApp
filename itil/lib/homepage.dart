@@ -25,7 +25,7 @@ class _HomePageState extends State<HomePage> {
         ),
         iconTheme: IconThemeData(
           color: Colors.grey,
-          size: 55.0,
+          size: 35.0,
         ),
       ),
       body: Container(
@@ -37,17 +37,20 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         child: SingleChildScrollView(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              '',
-              style: TextStyle(
-                  fontFamily: 'DancingScript',
-                  fontSize: 30,
-                  color: Colors.white),
-            ),
-          ],
+            child: Padding(
+          padding: EdgeInsets.all(8),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                'ITIL',
+                style: TextStyle(
+                    fontFamily: 'DancingScript',
+                    fontSize: 20,
+                    color: Colors.white),
+              ),
+            ],
+          ),
         )),
       ),
 

@@ -13,12 +13,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'ITIL',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
       home: const HomePage(
-        title: 'asas',
+        title: 'ITIL 4 Modül ve Süreçleri',
       ),
     );
   }
