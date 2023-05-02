@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:itil/homepage.dart';
 import 'package:itil/pages/page1.dart';
 import 'package:itil/pages/page2.dart';
 import 'package:itil/pages/page3.dart';
@@ -23,11 +24,23 @@ class _PrimaryDrawerState extends State<PrimaryDrawer> {
       // Important: Remove any padding from the ListView.
       padding: EdgeInsets.zero,
       children: [
-        const DrawerHeader(
-            decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage("../assets/itil.jpg")),
-            ),
-            child: Text('')),
+        GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => HomePage(
+                  title: 'ITIL 4 Modül ve Süreçleri',
+                ),
+              ),
+            );
+          },
+          child: const DrawerHeader(
+              decoration: BoxDecoration(
+                image: DecorationImage(image: AssetImage("../assets/itil.jpg")),
+              ),
+              child: Text('')),
+        ),
         ListTile(
           title: const Text('Değer Yönetimi'),
           onTap: () {
