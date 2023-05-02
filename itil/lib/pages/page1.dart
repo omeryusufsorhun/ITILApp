@@ -27,7 +27,7 @@ class Page1 extends StatelessWidget {
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/images/background.jpeg"),
+            image: AssetImage("../assets/background.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -36,56 +36,12 @@ class Page1 extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
-              'Find a gym,find your new body',
+              '',
               style: TextStyle(
                   fontFamily: 'DancingScript',
                   fontSize: 30,
                   color: Colors.white),
             ),
-            SizedBox(
-              height: 15.0,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10),
-              child: TextField(
-                onChanged: (value) {},
-                decoration: InputDecoration(
-                  suffixIcon: IconButton(
-                      color: Colors.black,
-                      icon: Icon(Icons.search),
-                      onPressed: () {}),
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.all(Radius.circular(45)),
-                  ),
-                  hintText: 'Enter name',
-                  filled: true, //<-- SEE HERE
-                  fillColor: Colors.white,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 100.0,
-            ),
-            Text(
-              'Are you a gym owner?',
-              style: TextStyle(
-                  fontFamily: 'DancingScript',
-                  fontSize: 20,
-                  color: Colors.white),
-            ),
-            SizedBox(
-              height: 15.0,
-            ),
-            ElevatedButton(
-              onPressed: () => {},
-              style: ElevatedButton.styleFrom(
-                textStyle: TextStyle(fontSize: 24),
-                minimumSize: Size(150, 35),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
-              ),
-              child: Text("Start Here"),
-            )
           ],
         )),
       ),
