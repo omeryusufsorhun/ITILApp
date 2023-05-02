@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:itil/pages/page1.dart';
 import 'package:itil/pages/page2.dart';
 import 'package:itil/pages/page3.dart';
+import 'package:itil/pages/page4.dart';
+import 'package:itil/pages/page5.dart';
 
 class PrimaryDrawer extends StatefulWidget {
   @override
@@ -24,12 +26,11 @@ class _PrimaryDrawerState extends State<PrimaryDrawer> {
       children: [
         const DrawerHeader(
             decoration: BoxDecoration(
-              image:
-                  DecorationImage(image: AssetImage("assets/images/gym.jpg")),
+              image: DecorationImage(image: AssetImage("../assets/itil.jpg")),
             ),
             child: Text('')),
         ListTile(
-          title: const Text('Gym List'),
+          title: const Text('Değer Yönetimi'),
           onTap: () {
             Navigator.pop(context);
             Navigator.of(context).push(
@@ -41,7 +42,7 @@ class _PrimaryDrawerState extends State<PrimaryDrawer> {
           },
         ),
         ListTile(
-          title: const Text('Register'),
+          title: const Text('ITIL Genel Yönetim Uygulamaları'),
           onTap: () {
             Navigator.pop(context);
             Navigator.of(context)
@@ -49,11 +50,27 @@ class _PrimaryDrawerState extends State<PrimaryDrawer> {
           },
         ),
         ListTile(
-          title: const Text('New Gym'),
+          title: const Text('Hizmet Yönetimi Uygulamaları'),
           onTap: () {
             Navigator.pop(context);
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => Page3()));
+          },
+        ),
+        ListTile(
+          title: const Text('Dijital ve İşletimsel Mükemmeliyet'),
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => Page4()));
+          },
+        ),
+        ListTile(
+          title: const Text('Yenilik ve Sürekli İyileştirme'),
+          onTap: () {
+            Navigator.pop(context);
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => Page5()));
           },
         ),
       ],
